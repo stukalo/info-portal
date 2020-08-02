@@ -1,0 +1,21 @@
+<h3>WEATHER</h3>
+<div>
+  <h4>City: {{weather?.location.name}}, {{weather?.location.country}}</h4>
+</div>
+<div>
+  <select class="capitals" (change)="onCapitalChange($event.target.value)">
+    <option *ngFor="let capital of capitals" [selected]="selectedCapital.name === capital.name">{{capital.name}}</option>
+  </select>
+</div>
+<div class="weather">
+  <p class="temp">
+    <span>temp: </span><span>{{weather?.current.temp_c}} &#8451;</span>
+  </p>
+  <p>
+    <span>wind: </span><span>{{weather?.current.wind_kph}} km/h {{weather?.current.wind_dir}}</span>
+  </p>
+  <p>
+    <span>{{weather && weather.current.is_day ? 'Day' : 'Night'}}</span>
+  </p>
+  <div class='weather-icon' [ngStyle]="{backgroundImage: 'url(' + weather?.current.condition.icon + ')'}"></div>
+</div>
