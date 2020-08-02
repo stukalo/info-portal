@@ -10,8 +10,7 @@
     "build-server": "cd info-portal-api && npm run build",
     "copy-client": "copyfiles --u 3 info-portal-client/dist/info-portal-client/* info-portal-api/dist/public",
     "build": "npm i && npm run install-client && npm run install-server && npm run build-client && npm run build-server && npm run copy-client",
-    "start": "npm run build && cd info-portal-api && npm run start",
-    "heroku-postbuild": "cd info-portal-client && npm install"
+    "start": "npm run build && cd info-portal-api && npm run start"
   },
   "repository": {
     "type": "git",
