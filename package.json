@@ -1,0 +1,28 @@
+{
+  "name": "info-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-client": "cd info-portal-client && npm i",
+    "install-server": "cd info-portal-api && npm i",
+    "build-client": "cd info-portal-client && ng build",
+    "build-server": "cd info-portal-api && npm run build",
+    "copy-client": "copyfiles --u 3 info-portal-client/dist/info-portal-client/* info-portal-api/dist/public",
+    "build": "npm i && npm run install-client && npm run install-server && npm run build-client && npm run build-server && npm run copy-client",
+    "start": "npm run build && cd info-portal-api && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stukalo/info-portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stukalo/info-portal/issues"
+  },
+  "homepage": "https://github.com/stukalo/info-portal#readme",
+  "devDependencies": {
+    "copyfiles": "^2.3.0"
+  }
+}

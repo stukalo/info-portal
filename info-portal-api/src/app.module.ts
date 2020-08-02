@@ -8,13 +8,19 @@ import {WeatherService} from "./weather/weather.service";
 import {WeatherController} from "./weather/weather.controller";
 import {CountriesController} from "./countries/countries.controller";
 import {CountriesService} from "./countries/countries.service";
+import {ServeStaticModule} from "@nestjs/serve-static";
+import {join} from 'path';
 
 @Module({
   imports: [
     HttpModule,
     ConfigModule.forRoot({
-    load: [configuration],
-  })],
+      load: [configuration],
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'dist/public'),
+    }),
+  ],
   controllers: [
     WeatherController,
     CountriesController,
