@@ -14,7 +14,12 @@ export class WeatherService {
     async getWeather(city: string): Promise<Weather> {
         const { weatherApiUrl, weatherApiKey } = this.apiConfigService;
         const url = `${weatherApiUrl}?key=${weatherApiKey}&q=${city}`;
-        const { data } = await this.httpService.get(url).toPromise();
-        return data;
+
+        try {
+            return (await this.httpService.get(url).toPromise()).data;
+        } catch (e) {
+            console.log('getWeather ERROR');
+            return null;
+        }
     }
 }
