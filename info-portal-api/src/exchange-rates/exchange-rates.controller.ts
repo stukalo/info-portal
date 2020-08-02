@@ -2,7 +2,7 @@ import {Controller, Get } from '@nestjs/common';
 import { ExchangeRatesService } from './exchange-rates.service';
 import {ExchangeRate} from 'src/models';
 
-@Controller()
+@Controller('api')
 export class ExchangeRatesController {
   constructor(private readonly exchangeRatesService: ExchangeRatesService) {}
 

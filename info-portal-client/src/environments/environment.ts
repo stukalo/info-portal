@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  weather_api_url: 'http://localhost:5000/weather',
-  capitals_api_url: 'http://localhost:5000/capitals',
-  exchange_rates_api_url: 'http://localhost:5000/exchange-rates'
+  weatherApiUrl: 'http://localhost:5000/api/weather',
+  capitalsApiUrl: 'http://localhost:5000/api/capitals',
+  exchangeRatesApiUrl: 'http://localhost:5000/api/exchange-rates'
 };
 
 /*

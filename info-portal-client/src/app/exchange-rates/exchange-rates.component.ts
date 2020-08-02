@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ExchangeRatesService} from "../core/services";
-import {ExchangeRate} from "../core/models";
+import {ExchangeRatesService} from '../core/services';
+import {ExchangeRate} from '../core/models';
 
 @Component({
   selector: 'app-exchange-rates',

@@ -15,12 +15,12 @@ export class WeatherService {
   ) { }
 
   getWeather(city: string): Observable<Weather> {
-    const url = `${environment.weather_api_url}?city=${city}`;
+    const url = `${environment.weatherApiUrl}?city=${city}`;
     return this.http.get<Weather>(url);
   }
 
   getCapitals(): Observable<Capital[]> {
-    return this.http.get<Capital[]>(environment.capitals_api_url);
+    return this.http.get<Capital[]>(environment.capitalsApiUrl);
   }
 }
 

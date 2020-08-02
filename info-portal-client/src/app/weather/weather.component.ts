@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {WeatherService} from "../core/services";
-import {Weather} from "../core/models";
-import {Capital} from "../core/models/capital.model";
+import {WeatherService} from '../core/services';
+import {Weather} from '../core/models';
+import {Capital} from '../core/models/capital.model';
 
 @Component({
   selector: 'app-weather',
@@ -42,6 +42,6 @@ export class WeatherComponent implements OnInit {
   }
 
   private getWeather(): void {
-    this.weatherService.getWeather(this.selectedCapital.name).subscribe(data => {this.weather = data});
+    this.weatherService.getWeather(this.selectedCapital.name).subscribe(data => {this.weather = data;});
   }
 }
