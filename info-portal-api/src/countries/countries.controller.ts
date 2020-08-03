@@ -11,6 +11,7 @@ export class CountriesController {
         return this.countriesService.getCountries();
     }
 
+
     @Get('capitals')
     getCapitals(): Promise<Capital[]> {
         return this.countriesService.getCapitals();
